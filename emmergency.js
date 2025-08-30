@@ -37,39 +37,7 @@ for (const button of buttons2) {
 
 // call section
 
-// let count3 = 100; // starting coins
-// const copyNumber3 = document.getElementById("copy-number-3");
-// const buttons3 = document.getElementsByClassName("btn-call");
-// const numbers3 = document.getElementsByClassName("help-line-numbers");
-// const title2 = document.getElementsByClassName("title-2");
-
-// let index2 = 0;
-// for (const button of buttons3) {
-//   const numberElement1 = numbers3[index2]; 
-//   const titleElements2 = title2[index2];
-
-//   button.addEventListener("click", function () {
-//     if (count3 <= 0) {
-//       alert("You have insufficient coins to call.");
-//       return; // stop execution if no coins left
-//     }
-
-//     count3 -= 20; // reduce by 20
-
-//     if (count3 < 0) count3 = 0; // prevent negative
-
-//     const number2 = numberElement1.innerText;
-//     const titleA2 = titleElements2.innerText;
-
-//     alert("Calling " + titleA2 + " " + number2);
-
-//     copyNumber3.innerText = count3;
-//   });
-
-//   index2++; // move to next
-// }
-
-let count3 = 100; // starting coins
+let count3 = 100; 
 const copyNumber3 = document.getElementById("copy-number-3");
 const buttons3 = document.getElementsByClassName("btn-call");
 const numbers3 = document.getElementsByClassName("help-line-numbers");
@@ -85,12 +53,12 @@ for (const button of buttons3) {
 
   button.addEventListener("click", function () {
     if (count3 <= 0) {
-      alert("You have insufficient coins to call.");
-      return; // stop execution if no coins left
+      alert("You have not sufficient coins to call.");
+      return; 
     }
 
-    count3 -= 20; // reduce by 20
-    if (count3 < 0) count3 = 0; // prevent negative
+    count3 -= 20; 
+    if (count3 < 0) count3 = 0; 
 
     const number2 = numberElement1.innerText;
     const titleA2 = titleElements2.innerText;
@@ -100,7 +68,7 @@ for (const button of buttons3) {
 
     copyNumber3.innerText = count3;
 
-    // create history entry
+    // history entry
     const historyItem = document.createElement("div");
     historyItem.className =
       "flex justify-between items-center bg-gray-50 rounded-lg p-3 mb-2";
@@ -116,10 +84,10 @@ for (const button of buttons3) {
     historySection.prepend(historyItem);
   });
 
-  index2++; // move to next
+  index2++;
 }
 
-// clear history button
+// history button
 clearBtn.addEventListener("click", () => {
   historySection.innerHTML = "";
 });
